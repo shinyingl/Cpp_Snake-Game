@@ -14,6 +14,9 @@ class Game {
            std::size_t target_frame_duration);
   int GetScore() const;
   int GetSize() const;
+  int SetObstacleSize() const;
+  bool FoodCell(int x, int y);
+  bool ObstacleCell(int x, int y);
 
  private:
   Snake snake;
@@ -26,6 +29,7 @@ class Game {
   std::uniform_int_distribution<int> random_h;
 
   int score{0};
+  int ob_size{3};
 
   void PlaceFood();
   void PlaceObstacle();

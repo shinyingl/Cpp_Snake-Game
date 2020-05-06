@@ -5,9 +5,10 @@
 Game::Game(std::size_t grid_width, std::size_t grid_height)
     : snake(grid_width, grid_height),
       engine(dev()),
-      random_w(0, static_cast<int>(grid_width)),
-      random_h(0, static_cast<int>(grid_height)) {
+      random_w(3, static_cast<int>(grid_width-3)),
+      random_h(3, static_cast<int>(grid_height-3)) {
   PlaceFood();
+  PlaceObstacle();
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
@@ -55,8 +56,7 @@ void Game::PlaceFood() {
   while (true) {
     x = random_w(engine);
     y = random_h(engine);
-    // Check that the location is not occupied by a snake item before placing
-    // food.
+    // Check that the location is not occupied by a snake item before placing food.
     if (!snake.SnakeCell(x, y)) {
       food.x = x;
       food.y = y;
@@ -65,6 +65,22 @@ void Game::PlaceFood() {
   }
 }
 
+bool Game::FoodCell(int x, int y) {
+  // if (x == static_cast<int>(food.x) && y == static_cast<int>(food.y)) {
+  if (x == (food.x) && y == (food.y)) {
+    return true;
+  }
+  return false;
+}
+
+
+bool Game::ObstacleCell(int x, int y) {
+    if ((obstacle.x - x >= -ob_size) && (obstacle.x - x <= 0) && (obstacle.y == y))  {
+      return true;
+    }
+    return false;
+  }
+
 void Game::PlaceObstacle() {
   int x, y;
   while (true) {
@@ -72,7 +88,7 @@ void Game::PlaceObstacle() {
     y = random_h(engine);
     // Check that the location is not occupied by a snake item before placing
     // obstacle. Need update to avoid food location.
-    if (!snake.SnakeCell(x, y)) {
+    if (!snake.SnakeCell(x, y) && !FoodCell(x,y)) {
       obstacle.x = x;
       obstacle.y = y;
       return;
@@ -85,12 +101,19 @@ void Game::Update() {
 
   snake.Update();
 
+  // std::cout << "obstacle = " << obstacle.x<< "\n";
+
   int new_x = static_cast<int>(snake.head_x);
-  int new_y = static_cast<int>(snake.head_y);
+  int new_y = static_cast<int>(snake.head_y);  
+  
+  if (ObstacleCell(snake.head_x,snake.head_y)) {
+    score --;
+    return;
+  }  
 
   // Check if there's food over here
-  if (food.x == new_x && food.y == new_y) {
-    score++;
+  if (FoodCell(new_x, new_y)) {
+    score = score + 10;
     PlaceFood();
     PlaceObstacle();
     // Grow snake and increase speed.

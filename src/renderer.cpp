@@ -38,10 +38,14 @@ Renderer::~Renderer() {
   SDL_Quit();
 }
 
-void Renderer::Render(Snake const snake, SDL_Point const &food, SDL_Point const &obstacle) {
+void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obstacle) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
+
+  SDL_Rect retangle;
+  retangle.w = ob_size * block.w;
+  retangle.h = 1 * block.h;
 
   // Clear screen
   SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
@@ -54,12 +58,11 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, SDL_Point const 
   SDL_RenderFillRect(sdl_renderer, &block);
 
 // Render obstacle
-  SDL_SetRenderDrawColor(sdl_renderer, 0x7F, 0x7F, 0x7F, 0xFF);
-  block.x = obstacle.x * block.w;
-  block.y = obstacle.y * block.h;
-  SDL_RenderFillRect(sdl_renderer, &block);
-
-
+  SDL_SetRenderDrawColor(sdl_renderer, 0x7F, 0x7F, 0x7F, 0x7F);
+  retangle.x = obstacle.x * block.w;
+  retangle.y = obstacle.y * block.h;
+  
+  SDL_RenderFillRect(sdl_renderer, &retangle);
 
 
   // Render snake's body
@@ -73,7 +76,20 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, SDL_Point const 
   // Render snake's head
   block.x = static_cast<int>(snake.head_x) * block.w;
   block.y = static_cast<int>(snake.head_y) * block.h;
-  if (snake.alive) {
+
+  // Check if the snake head hits obstacle point
+  bool is_hit = false;
+  if (obstacle.x - static_cast<int>(snake.head_x) >= -ob_size && obstacle.x - static_cast<int>(snake.head_x) <= 0 && obstacle.y == static_cast<int>(snake.head_y) ) {
+    is_hit = true;
+    // std::cout << "hit =  " << is_hit << "\n";
+  }
+
+  // std::cout << "obstacle = " << obstacle.x<< "\n";
+  // std::cout << "head = " << snake.head_x<< "\n";
+  // std::cout << "width = " << grid_width<< "\n";
+  
+  
+  if (snake.alive && !is_hit) {
     SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
   } else {
     SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
