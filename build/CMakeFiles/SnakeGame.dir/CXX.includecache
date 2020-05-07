@@ -10,6 +10,14 @@
 snake.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/snake.h
 
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/game.cpp
+game.h
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/game.h
+iostream
+-
+SDL.h
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/SDL.h
+
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/game.h
 random
 -
@@ -21,6 +29,8 @@ renderer.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/renderer.h
 snake.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/snake.h
+rock.h
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.h
 
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/main.cpp
 iostream
@@ -29,8 +39,18 @@ controller.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/controller.h
 game.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/game.h
+rock.h
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.h
 renderer.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/renderer.h
+
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/renderer.cpp
+renderer.h
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/renderer.h
+iostream
+-
+string
+-
 
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/renderer.h
 vector
@@ -39,6 +59,16 @@ SDL.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/SDL.h
 snake.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/snake.h
+rock.h
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.h
+
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.cpp
+rock.h
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.h
+
+/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.h
+iostream
+-
 
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/snake.h
 vector

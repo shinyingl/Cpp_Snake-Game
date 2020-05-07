@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/game.cpp" "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/build/CMakeFiles/SnakeGame.dir/src/game.cpp.o"
   "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/main.cpp" "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/build/CMakeFiles/SnakeGame.dir/src/main.cpp.o"
   "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/renderer.cpp" "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/build/CMakeFiles/SnakeGame.dir/src/renderer.cpp.o"
+  "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.cpp" "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/build/CMakeFiles/SnakeGame.dir/src/rock.cpp.o"
   "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/snake.cpp" "/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/build/CMakeFiles/SnakeGame.dir/src/snake.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

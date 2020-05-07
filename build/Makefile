@@ -251,6 +251,33 @@ src/renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/renderer.cpp.s
 .PHONY : src/renderer.cpp.s
 
+src/rock.o: src/rock.cpp.o
+
+.PHONY : src/rock.o
+
+# target to build an object file
+src/rock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/rock.cpp.o
+.PHONY : src/rock.cpp.o
+
+src/rock.i: src/rock.cpp.i
+
+.PHONY : src/rock.i
+
+# target to preprocess a source file
+src/rock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/rock.cpp.i
+.PHONY : src/rock.cpp.i
+
+src/rock.s: src/rock.cpp.s
+
+.PHONY : src/rock.s
+
+# target to generate assembly for a file
+src/rock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/rock.cpp.s
+.PHONY : src/rock.cpp.s
+
 src/snake.o: src/snake.cpp.o
 
 .PHONY : src/snake.o
@@ -299,6 +326,9 @@ help:
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"
+	@echo "... src/rock.o"
+	@echo "... src/rock.i"
+	@echo "... src/rock.s"
 	@echo "... src/snake.o"
 	@echo "... src/snake.i"
 	@echo "... src/snake.s"

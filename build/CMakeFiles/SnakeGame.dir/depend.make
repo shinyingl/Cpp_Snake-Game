@@ -55,6 +55,7 @@ CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/controller.h
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/game.cpp
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/game.h
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/renderer.h
+CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/rock.h
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/snake.h
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL.h
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_assert.h
@@ -107,6 +108,7 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/controller.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/game.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/renderer.h
+CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/rock.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: ../src/snake.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL.h
 CMakeFiles/SnakeGame.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_assert.h
@@ -157,6 +159,7 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include
 
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: ../src/renderer.h
+CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: ../src/rock.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: ../src/snake.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_assert.h
@@ -204,6 +207,9 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/inc
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_video.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/begin_code.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/close_code.h
+
+CMakeFiles/SnakeGame.dir/src/rock.cpp.o: ../src/rock.cpp
+CMakeFiles/SnakeGame.dir/src/rock.cpp.o: ../src/rock.h
 
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/snake.cpp
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/snake.h
