@@ -2,13 +2,12 @@
 #include <iostream>
 #include <string>
 
-Renderer::Renderer(const std::size_t screen_width,
-                   const std::size_t screen_height,
-                   const std::size_t grid_width, const std::size_t grid_height, const std::size_t ob_size)
-    : screen_width(screen_width),
-      screen_height(screen_height),
-      grid_width(grid_width),
-      grid_height(grid_height) {
+Renderer::Renderer(const std::size_t screen_width, const std::size_t screen_height,
+                   const std::size_t grid_width, const std::size_t grid_height)
+    : screen_width(screen_width), screen_height(screen_height),
+      grid_width(grid_width), grid_height(grid_height)
+{
+ 
   // Initialize SDL
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     std::cerr << "SDL could not initialize.\n";
@@ -40,7 +39,7 @@ Renderer::~Renderer() {
 
 
 
-void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obstacle) {
+void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obstacle, int ob_size) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
@@ -81,6 +80,7 @@ void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obsta
 
   // Check if the snake head hits obstacle point
   bool is_hit = false;
+  std::cout << "ob_size in renderer " << ob_size << '\n';
   if (obstacle.x - static_cast<int>(snake.head_x) >= -ob_size && obstacle.x - static_cast<int>(snake.head_x) <= 0 && obstacle.y == static_cast<int>(snake.head_y) ) {
     is_hit = true;
     // std::cout << "hit =  " << is_hit << "\n";

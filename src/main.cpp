@@ -14,16 +14,18 @@ int main() {
 
   // Rock rock(3);
   // rock.SetObstacleSize();
-  int ob_size;
-  std::cout << "Please enter the obstacsize between 2 to 10" << std::endl;
-  std::cin >> ob_size;
-  std::cout << "rock size is " << ob_size << '\n';
+  // int ob_size;
+ 
+  // std::cout << "Please enter the obstacsize between 2 to 10" << std::endl;
+  // std::cin >> x;
+  // std::cout << "rock size is " << x << '\n';
   // Rock rock(ob_size);
   
-
-  Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight, ob_size);
+  Rock rock;
+  rock.SetObstacleSize();
+  Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
   Controller controller;
-  Game game(ob_size, kGridWidth, kGridHeight);
+  Game game(kGridWidth, kGridHeight);
   game.Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Your Score: " << game.GetScore() << "\n";

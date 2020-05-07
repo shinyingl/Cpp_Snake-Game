@@ -7,10 +7,12 @@
 class Rock
 {
 public:
-    // void SetObstacleSize();
-    // void myMethod();
-    Rock(int ob_size);
-    int ob_size{3};
+    
+    
+    int ob_size;
+    void SetObstacleSize();
+    int GetSize() const;
+
 };
 
 

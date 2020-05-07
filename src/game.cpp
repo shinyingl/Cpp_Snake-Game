@@ -2,7 +2,7 @@
 #include <iostream>
 #include "SDL.h"
 
-Game::Game(int ob_size, std::size_t grid_width, std::size_t grid_height)
+Game::Game(std::size_t grid_width, std::size_t grid_height)
     : snake(grid_width, grid_height),
       engine(dev()),
       random_w(0, static_cast<int>(grid_width-3)),
@@ -26,7 +26,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     Update();
-    renderer.Render(snake, food, obstacle);
+    renderer.Render(snake, food, obstacle, rock.ob_size);
 
     frame_end = SDL_GetTicks();
 
@@ -74,9 +74,10 @@ bool Game::FoodCell(int x, int y) {
 }
 
 
-bool Game::ObstacleCell(int x, int y, int ob_size) {
+bool Game::ObstacleCell(int x, int y) {
+    rock.GetSize();
     // if ((obstacle.x - x >= -rock.ob_size) && (obstacle.x - x <= 0) && (obstacle.y == y))  {
-    if ((obstacle.x - x >= -ob_size) && (obstacle.x - x <= 0) && (obstacle.y == y))  {
+    if ((obstacle.x - x >= -rock.ob_size) && (obstacle.x - x <= 0) && (obstacle.y == y))  {
       return true;
     }
     return false;
@@ -101,13 +102,16 @@ void Game::Update() {
   if (!snake.alive) return;
 
   snake.Update();
+  rock.GetSize();
+    // if ((obstacle.
 
   // std::cout << "obstacle = " << obstacle.x<< "\n";
 
   int new_x = static_cast<int>(snake.head_x);
-  int new_y = static_cast<int>(snake.head_y);  
+  int new_y = static_cast<int>(snake.head_y);
   
-  if (ObstacleCell(snake.head_x,snake.head_y,ob_size)) {
+  
+  if (ObstacleCell(snake.head_x, snake.head_y)) {
     score --;
     return;
   }  
