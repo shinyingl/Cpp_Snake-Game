@@ -8,8 +8,8 @@ class Rock
 {
 public:
     
-    
-    int ob_size;
+    Rock();
+    int ob_size{3};
     void SetObstacleSize();
     int GetSize() const;
 

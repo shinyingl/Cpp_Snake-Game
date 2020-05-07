@@ -80,17 +80,11 @@ void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obsta
 
   // Check if the snake head hits obstacle point
   bool is_hit = false;
-  std::cout << "ob_size in renderer " << ob_size << '\n';
+  // std::cout << "ob_size in renderer " << ob_size << '\n';
   if (obstacle.x - static_cast<int>(snake.head_x) >= -ob_size && obstacle.x - static_cast<int>(snake.head_x) <= 0 && obstacle.y == static_cast<int>(snake.head_y) ) {
     is_hit = true;
-    // std::cout << "hit =  " << is_hit << "\n";
   }
 
-  // std::cout << "obstacle = " << obstacle.x<< "\n";
-  // std::cout << "head = " << snake.head_x<< "\n";
-  // std::cout << "width = " << grid_width<< "\n";
-  
-  
   if (snake.alive && !is_hit) {
     SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
   } else {
