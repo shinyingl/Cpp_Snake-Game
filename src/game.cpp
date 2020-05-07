@@ -2,11 +2,11 @@
 #include <iostream>
 #include "SDL.h"
 
-Game::Game(std::size_t grid_width, std::size_t grid_height)
+Game::Game(int ob_size, std::size_t grid_width, std::size_t grid_height)
     : snake(grid_width, grid_height),
       engine(dev()),
-      random_w(3, static_cast<int>(grid_width-3)),
-      random_h(3, static_cast<int>(grid_height-3)) {
+      random_w(0, static_cast<int>(grid_width-3)),
+      random_h(0, static_cast<int>(grid_height-3)) {
   PlaceFood();
   PlaceObstacle();
 }
@@ -74,7 +74,8 @@ bool Game::FoodCell(int x, int y) {
 }
 
 
-bool Game::ObstacleCell(int x, int y) {
+bool Game::ObstacleCell(int x, int y, int ob_size) {
+    // if ((obstacle.x - x >= -rock.ob_size) && (obstacle.x - x <= 0) && (obstacle.y == y))  {
     if ((obstacle.x - x >= -ob_size) && (obstacle.x - x <= 0) && (obstacle.y == y))  {
       return true;
     }
@@ -106,7 +107,7 @@ void Game::Update() {
   int new_x = static_cast<int>(snake.head_x);
   int new_y = static_cast<int>(snake.head_y);  
   
-  if (ObstacleCell(snake.head_x,snake.head_y)) {
+  if (ObstacleCell(snake.head_x,snake.head_y,ob_size)) {
     score --;
     return;
   }  

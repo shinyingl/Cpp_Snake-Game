@@ -4,7 +4,7 @@
 
 Renderer::Renderer(const std::size_t screen_width,
                    const std::size_t screen_height,
-                   const std::size_t grid_width, const std::size_t grid_height)
+                   const std::size_t grid_width, const std::size_t grid_height, const std::size_t ob_size)
     : screen_width(screen_width),
       screen_height(screen_height),
       grid_width(grid_width),
@@ -37,6 +37,8 @@ Renderer::~Renderer() {
   SDL_DestroyWindow(sdl_window);
   SDL_Quit();
 }
+
+
 
 void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obstacle) {
   SDL_Rect block;

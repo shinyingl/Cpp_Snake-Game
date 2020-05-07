@@ -4,11 +4,12 @@
 #include <vector>
 #include "SDL.h"
 #include "snake.h"
+#include "rock.h"
 
 class Renderer {
  public:
   Renderer(const std::size_t screen_width, const std::size_t screen_height,
-           const std::size_t grid_width, const std::size_t grid_height);
+           const std::size_t grid_width, const std::size_t grid_height, const std::size_t ob_size);
   ~Renderer();
 
   // void Render(Snake const snake, SDL_Point const &food, SDL_Point const &obstacle);
@@ -16,6 +17,7 @@ class Renderer {
   void UpdateWindowTitle(int score, int fps);
 
  private:
+  // Rock rock(int ob_size);
   SDL_Window *sdl_window;
   SDL_Renderer *sdl_renderer;
 
@@ -24,7 +26,7 @@ class Renderer {
   const std::size_t grid_width;
   const std::size_t grid_height;
 
-  int ob_size{3};
+  int ob_size;
 };
 
 #endif
