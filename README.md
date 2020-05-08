@@ -26,7 +26,7 @@ The [starter code](https://github.com/udacity/CppND-Capstone-Snake-Game) and ori
 
 * Close the window to terminate the game.
 * The final score will be shown on the terminal.  
-	<img src="image/score.png"/>
+	<img src="image/Score.png"/>
 
 
 ## Project Criteria
