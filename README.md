@@ -20,14 +20,20 @@ The [starter code](https://github.com/udacity/CppND-Capstone-Snake-Game) and ori
 	<img src="image/input.png"/>
 
 * Snake body grows after eating the food. Score points will be increased.
+
 * Snake head will turn red if it hit the rock. Score points will be deducted.
+
 * The score is shown on the window title.
-	<img src="image/game2.png"/>
 
 * Close the window to terminate the game.
+
 * The final score will be shown on the terminal.  
 	<img src="image/Score.png"/>
 
+
+## Code Structure
+
+ <img src="image/CodeStructure.png"/>
 
 ## Project Criteria
 
