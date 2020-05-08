@@ -13,7 +13,7 @@ void Rock::SetObstacleSize() {
         std::cin.clear();
         std::cin >> ob_size;
         }
-  std::cout << "The obstacle size is " << ob_size << std::endl;
+  std::cout << "The obstacle size is " << ob_size << "."<<std::endl;
 }
 
 int Rock::GetSize() const

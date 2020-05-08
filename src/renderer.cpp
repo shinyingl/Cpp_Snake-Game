@@ -5,8 +5,7 @@
 Renderer::Renderer(const std::size_t screen_width, const std::size_t screen_height,
                    const std::size_t grid_width, const std::size_t grid_height)
     : screen_width(screen_width), screen_height(screen_height),
-      grid_width(grid_width), grid_height(grid_height)
-{
+      grid_width(grid_width), grid_height(grid_height) {
  
   // Initialize SDL
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
@@ -38,13 +37,12 @@ Renderer::~Renderer() {
 }
 
 
-
-void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obstacle, int ob_size) {
+void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obstacle, Rock rock) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
-
   SDL_Rect retangle;
+  int ob_size = rock.GetSize();
   retangle.w = ob_size * block.w;
   retangle.h = 1 * block.h;
 
@@ -81,7 +79,7 @@ void Renderer::Render(Snake snake, SDL_Point const &food, SDL_Point const &obsta
   // Check if the snake head hits obstacle point
   bool is_hit = false;
   // std::cout << "ob_size in renderer " << ob_size << '\n';
-  if (obstacle.x - static_cast<int>(snake.head_x) >= -ob_size && obstacle.x - static_cast<int>(snake.head_x) <= 0 && obstacle.y == static_cast<int>(snake.head_y) ) {
+  if (obstacle.x - static_cast<int>(snake.head_x) > -ob_size && obstacle.x - static_cast<int>(snake.head_x) <= 0 && obstacle.y == static_cast<int>(snake.head_y) ) {
     is_hit = true;
   }
 

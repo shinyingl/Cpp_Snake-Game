@@ -1,12 +1,45 @@
-# CPPND: Capstone Snake Game Example
+# Capstone: Snake Game
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+This project is to practice on objective oriented programming in C++.
+The [starter code](https://github.com/udacity/CppND-Capstone-Snake-Game) and original [idea](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) can be found by the hyperlink. In this repo, additonal features are listed as below:
 
-<img src="snake_game.gif"/>
+1. A gray rock is added to the game to make the game more exciting. 
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+2. User is promted to enter the size of the rock (obstacle) to adjust the difficulty of the game.
+3. Includes the panelty from hitting the rock in score calculation.
 
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+	<img src="image/Cpp_capstone04.gif"/>
+
+## How to play the game?
+* Use arrow keys to controll the blue snake head direction. 
+
+* The goal is to eat the yellow food, and avoid the rock for maximum score.
+
+* Rock size is determined by user input.
+
+	<img src="image/input.png"/>
+
+* Snake body grows after eating the food. Score points will be increased.
+* Snake head will turn red if it hit the rock. Score points will be deducted.
+* The score is shown on the window title.
+	<img src="image/game2.png"/>
+
+* Close the window to terminate the game.
+* The final score will be shown on the terminal.  
+	<img src="image/score.png"/>
+
+
+## Project Criteria
+
+ Item           | Criteria      | Specifications Met 	|
+| ------------- |:-------------:|-------------------------:|
+| Loops, Functions, I/O     | The project accepts user input and processes the input. | User is promted to enter rock size. The final score will be listed on the terminal after the game is ended. |
+| Object Oriented Programming    | The project uses Object Oriented Programming techniques. | Class `Rock` is created to hold rock size from user input with setter and getter|
+| Object Oriented Programming    | Classes use appropriate access specifiers for class members. | Class `Rock` and  methods are integrated into `game.h` with appropirate specifiers|
+| Object Oriented Programming    | All class members that are set to argument values are initialized through member initialization lists. | Class `Rock` set the defaultt `ob_size{3}` |
+| Memory Management    | The project makes use of references in function declarations. |  The obstacle and fodd location are passed to `render` by reference |
+
+
 
 ## Dependencies for Running Locally
 * cmake >= 3.7

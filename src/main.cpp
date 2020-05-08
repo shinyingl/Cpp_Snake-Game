@@ -16,8 +16,11 @@ int main() {
   Controller controller;
   Game game(kGridWidth, kGridHeight);
   game.Run(controller, renderer, kMsPerFrame);
-  std::cout << "Game has terminated successfully!\n";
-  std::cout << "Your Score: " << game.GetScore() << "\n";
-  std::cout << "Snake Size: " << game.GetSize() << "\n";
+  std::cout << "---------------------------------"<< std::endl;
+  std::cout << "Game is terminated successfully!"<< std::endl;
+  std::cout << "Snake Size: " << game.GetSize() << std::endl;
+  std::cout << "Your Score: " << game.GetScore() << std::endl;
+  if (game.GetScore()<0) {std::cout << "Try to detour from the gray rock to avoid score deduction. Let's try again!"<< std::endl;};
+  
   return 0;
 }

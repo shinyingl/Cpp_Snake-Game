@@ -27,7 +27,8 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     controller.HandleInput(running, snake);
     Update();
     // rock.GetSize();
-    renderer.Render(snake, food, obstacle, rock.ob_size);
+    // renderer.Render(snake, food, obstacle, rock.ob_size);
+    renderer.Render(snake, food, obstacle, rock);
 
     frame_end = SDL_GetTicks();
 
@@ -67,7 +68,6 @@ void Game::PlaceFood() {
 }
 
 bool Game::FoodCell(int x, int y) {
-  // if (x == static_cast<int>(food.x) && y == static_cast<int>(food.y)) {
   if (x == (food.x) && y == (food.y)) {
     return true;
   }
@@ -77,7 +77,7 @@ bool Game::FoodCell(int x, int y) {
 
 bool Game::ObstacleCell(int x, int y) {
     rock.GetSize();
-    if ((obstacle.x - x >= -rock.ob_size) && (obstacle.x - x <= 0) && (obstacle.y == y))  {
+    if ((obstacle.x - x > -rock.ob_size) && (obstacle.x - x <= 0) && (obstacle.y == y))  {
       return true;
     }
     return false;

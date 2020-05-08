@@ -10,14 +10,6 @@
 snake.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/snake.h
 
-/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/game.cpp
-game.h
-/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/game.h
-iostream
--
-SDL.h
-/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/SDL.h
-
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/game.h
 random
 -
@@ -59,10 +51,6 @@ SDL.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/SDL.h
 snake.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/snake.h
-rock.h
-/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.h
-
-/Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.cpp
 rock.h
 /Users/shin/Documents/Next/Cpp/Capstone/CppND-Capstone-Snake-Game/src/rock.h
 

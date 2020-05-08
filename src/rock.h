@@ -12,7 +12,7 @@ public:
     int ob_size{3};
     void SetObstacleSize();
     int GetSize() const;
-
+   
 };
 
 
