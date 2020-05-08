@@ -32,12 +32,13 @@ The [starter code](https://github.com/udacity/CppND-Capstone-Snake-Game) and ori
 ## Project Criteria
 
  Item           | Criteria      | Specifications Met 	|
-| ------------- |:-------------:|-------------------------:|
-| Loops, Functions, I/O     | The project accepts user input and processes the input. | User is promted to enter rock size. The final score will be listed on the terminal after the game is ended. |
-| Object Oriented Programming    | The project uses Object Oriented Programming techniques. | Class `Rock` is created to hold rock size from user input with setter and getter|
-| Object Oriented Programming    | Classes use appropriate access specifiers for class members. | Class `Rock` and  methods are integrated into `game.h` with appropirate specifiers|
-| Object Oriented Programming    | All class members that are set to argument values are initialized through member initialization lists. | Class `Rock` set the defaultt `ob_size{3}` |
-| Memory Management    | The project makes use of references in function declarations. |  The obstacle and fodd location are passed to `render` by reference |
+| :------------- |:-------------|:-------------------------|
+| Loops, Functions, I/O     | 1. The project accepts user input and processes the input. | User is promted to enter rock size. The final score will be listed on the terminal after the game is ended. |
+| Object Oriented Programming    | 2. The project uses Object Oriented Programming techniques. | Class `Rock` is created to hold rock size from user input with setter and getter.|
+| Object Oriented Programming    | 3. Classes use appropriate access specifiers for class members. | Class `Rock` and  methods are integrated into `game.h` with appropirate specifiers.|
+| Object Oriented Programming    | 4.All class members that are set to argument values are initialized through member initialization lists. | Class `Rock` set the defaultt `ob_size{3}`  and is set to a user value later.|
+| Object Oriented Programming    | 5. Classes abstract implementation details from their interfaces. | All class member functions document the effects trhough function names and comments. |
+| Memory Management    | 6. The project makes use of references in function declarations. |  The obstacle and food location are passed to `render` by reference. |
 
 
 
